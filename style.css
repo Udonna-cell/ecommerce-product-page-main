@@ -1,0 +1,343 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --Orange: hsl(26, 100%, 55%);
+  --Pale-orange: hsl(25, 100%, 94%);
+  --Very-dark-blue: hsl(220, 13%, 13%);
+  --Dark-grayish-blue: hsl(219, 9%, 45%);
+  --Grayish-blue: hsl(220, 14%, 75%);
+  --Light-grayish-blue: hsl(223, 64%, 98%);
+  --White: hsl(0, 0%, 100%);
+  --Black: hsl(0, 0%, 0%);
+  --padding-left-right: 2rem;
+}
+@font-face {
+  font-family: "kumbh";
+  src: url("./Kumbh_Sans/static/KumbhSans-Regular.ttf");
+}
+@font-face {
+  font-family: "kumbh bold";
+  src: url("./Kumbh_Sans/static/KumbhSans-Bold.ttf");
+}
+
+/* globals style */
+img {
+  width: 100%;
+}
+body {
+  min-height: 100vh;
+  padding: 0 3.5rem;
+  font-size: 1rem;
+  font-family: "kumbh";
+}
+  
+/* navigation style section */
+nav {
+  padding: 1rem;
+  margin-bottom: 92px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid gray;
+}
+
+nav > section.main div.burger {
+  height: 25px;
+  width: 25px;
+  display: none;
+}
+nav > section.main > div,
+nav > section:last-child {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 1rem;
+}
+nav > section:last-child div.profile {
+  width: 45px;
+  height: 45px;
+}
+nav > section.main menu ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: var(--Dark-grayish-blue);
+  gap: 1.5rem;
+}
+nav > section.main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3.5rem;
+}
+
+/* header style */
+
+header {
+  display: flex;
+  align-items: center;
+  padding: 0 5rem;
+  gap: 122px;
+}
+header > figure {
+  width: 444px;
+}
+header > figure > div img {
+  border-radius: 10px;
+}
+header > figure > div {
+  /* width: 444px; */
+  height: 444px;
+}
+header > figure > section.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 34px;
+  margin-top: 32px;
+}
+header > figure > section.container > div {
+  height: 92px;
+  width: 94px;
+  flex-grow: 1;
+}
+header > figure > section.container > div img {
+  border-radius: 10px;
+}
+header > figure > section.container > div img,
+header > figure > div img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+header > main {
+  max-width: 450px;
+}
+header > main > article {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+header > main > article p,
+nav li {
+  color: var(--Dark-grayish-blue);
+} 
+header > main article h1 {
+  font-size: 44px;
+  font-family: "kumbh bold";
+}
+header > main article h5 {
+  width: fit-content;
+  padding: 5px;
+  text-align: center;
+  color: var(--Orange);
+  background-color: var(--Pale-orange);
+  letter-spacing: 3px;
+  border-radius: 5px;
+}
+header > main section.data {
+  margin-top: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+header > main section.data > div.price {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+} 
+header > main section.data > div.price > div {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+}
+header > main section.data > div.price p.cost {
+  font-family: "kumbh bold";
+  font-size: 30px;
+}
+header > main section.data > div.price p.discount {
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  font-size: 17px;
+  font-family: "kumbh bold";
+  border-radius: 5px;
+  text-align: center;
+  background-color: var(--Pale-orange);
+  color: var(--Orange);
+  padding: 5px;
+  align-items: center;
+}
+header > main section.data > div.price > p {
+  color: var(--Grayish-blue);
+  font-size: 18px;
+}
+
+header > main section.count {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+header > main section.count > button {
+  width: 270px;
+  /* min-width: 100%; */
+  height: 56px;
+  color: var(--White);
+  background-color: var(--Orange);
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  font-family: "kumbh bold";
+  border-radius: 5px;
+  box-shadow: 5px 10px 4px 1px var(--Pale-orange);
+}
+header > main section.count > div.display {
+  display: flex;
+  align-items: center;
+  width: 156px;
+  justify-items: stretch;
+  background-color: var(--Light-grayish-blue);
+  border-radius: 5px;
+  /* gap: 1rem; */
+}
+
+header > main section.count > div.display * {
+  flex-grow: 1;
+  text-align: center;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: none;
+  font-family: "kumbh bold";
+  font-size: 1rem;
+}
+header > main section.count > div.display button {
+  color: var(--Orange);
+}
+
+div.attribution {
+  margin: 1.5rem 0;
+}
+
+
+header > figure > div button {
+  display: none;
+}
+
+/* action  */
+button,
+nav li,
+.card,
+.showcase,
+.cart, .profile {
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1024px) {
+  body,
+  header {
+    padding: 0;
+  }
+
+  nav > section.main > menu,
+  header > figure > section.container {
+    display: none;
+  }
+  
+  nav {
+    margin-bottom: 0;
+  }
+  nav > section.main div.burger {
+    display: block;
+  }
+
+  /* header styling for mobile view */
+
+  header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  header > figure {
+    width: 100%;
+    position: relative;
+  }
+  header > figure > div.showcase img {
+    border-radius: 0;
+  }
+  header > figure > div.showcase {
+    height: 300px;
+  }
+  header > main > section.data > section.count {
+    flex-direction: column;
+  }
+  header > main > section.data > div.price {
+    flex-direction: row;
+  }
+  header > main {
+    padding: 1.5rem;
+  }
+  header > main article h1 {
+    font-size: 8.5vw;
+  }
+  header > main article p {
+    font-size: 20px;
+  }
+
+  header > main section.count > button {
+    max-width: 270px;
+    min-width: 100%;
+  }
+
+  header > main section.count > div.display {
+    max-width: 270px;
+    min-width: 100%;
+    height: 56px;
+  }
+
+  header > figure > div button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--White);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    border: none;
+  }
+  header > figure > div button img {
+    width: 15px;
+    height: 15px;
+  }
+
+  header > figure > div button.left {
+    left: 10%;
+  }
+  header > figure > div button.right {
+    right: -2%;
+  }
+}
